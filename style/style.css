@@ -14,7 +14,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: pink;
+  background-color: #FFDEF3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,9 +52,6 @@ body {
 
 .container div.seven {
   z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 
@@ -156,6 +153,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
+  top: 20%;
 }
 
 
@@ -215,14 +213,14 @@ body {
   align-items: center;
   flex-direction: column;
 }
-i {
+.eight i {
   font-size: 7.5em;
   color: #7d2ae8;
   border: 5px solid transparent;
   outline: 3px solid #7d2ae8;
   border-radius: 50%;
 }
-.question {
+.eight .question {
   font-size: 3em;
   color: #7d2ae8;
   margin: 15px 0;

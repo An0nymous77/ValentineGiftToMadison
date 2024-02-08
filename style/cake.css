@@ -4,21 +4,29 @@
 .six {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: #FFDEF3;
+    align-items: flex-end;
+    background: #ffe2f5;
+}
+
+.six .caketext-1, .caketext-2, .caketext-3{
+  position: absolute;
+  top: 30px;
+  font-size: 2rem;
+  font-family: "Work Sans", sans-serif;
 }
 
 .cake {
-    height: 100%;
+    height: 80vh;
     width: auto;
     position: absolute;
+    margin-bottom: 15px;
 }
 
 .bg {
 	width: 100%;
 	height: 100%;
 	display: table;
-	
+
 }
 
 @import url('https://fonts.googleapis.com/css?family=Mirza&amp;subset=latin-ext');

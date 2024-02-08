@@ -59,7 +59,7 @@ const animationTimeline = () => {
       "-=1"
     )
     .to(".container", 0.7, {
-      backgroundColor: "#FFC0CB",
+      backgroundColor: "#ffdef3",
     })
     .from(".three", 0.7, {
       opacity: 0,
@@ -172,7 +172,10 @@ const animationTimeline = () => {
       0.2,
       "+=1"
     )
-    .from(".idea-7", 0.7, ideaTextTrans)
+    .to(".container", 0.7, {
+      backgroundColor: "#D7ECFF",
+    })
+    .from(".idea-7", 0.7, ideaTextTrans,"-=0.5")
     .staggerFromTo(
       ".baloons img",
       5.5,
@@ -187,14 +190,21 @@ const animationTimeline = () => {
       0.2,
       "-=0.8"
     )
-    .to(".idea-7", 0.7, ideaTextTransLeave)
+    .to(".idea-7", 0.7, ideaTextTransLeave, "-=2")
+    .to(".container", 0, {
+      backgroundColor: "#ffdef3",
+    }, "-=1")
+    .from(".caketext-1-pre", 0.7, ideaTextTrans,  "-=1")
+    .to(".caketext-1-pre", 0.7, ideaTextTransLeave, "+=1.5")
+    .to(".caketext-1", 0, ideaTextTransLeave)
     .from(".six", 0.7, {
       opacity: 0,
-      y: 10,
-      // scale: 0.7
-    }, 
-    "-=1")
-    .add(unlockRecorder)
+      y: 20,
+      scale: 0.7
+    })
+    .from(".caketext-2", 0.7, ideaTextTrans,"+=1.5")
+    .to(".caketext-2", 0.7, ideaTextTransLeave, "+=2")
+    .from(".caketext-3", 0.7, ideaTextTrans).add(unlockRecorder)
     // .from(".hat", 0.5, {
     //   x: -100,
     //   y: 350,
