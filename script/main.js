@@ -281,7 +281,15 @@ var start_btn = document.querySelector(".start_btn");
 
 start_btn.onclick = ()=>{
   start_btn.classList.add("inactive");
-  animationTimeline() //show info box
+  navigator.permissions.query({name: "microphone"}). then(res=>{
+    if(res.state == "granted"){
+      animationTimeline(); //show info box
+      console.log("pass");
+    }
+    else {
+      console.log("failed");
+    }
+  })
 }
 
 let initialscale = 1 
