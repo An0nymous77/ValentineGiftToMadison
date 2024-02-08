@@ -1,7 +1,7 @@
 
 var trials = 0;
 var lock = true;
-navigator.mediaDevices.getUserMedia({
+await navigator.mediaDevices.getUserMedia({
     audio: true,
     video: false,
   })
@@ -41,6 +41,11 @@ navigator.mediaDevices.getUserMedia({
     .catch(function(err) {
       /* handle the error */
       console.error(err);
+    })
+    
+    dispatchEvent({
+        type: MICROPHONE_ACCESSS,
+        payload: retval
     });
 
 
